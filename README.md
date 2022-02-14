@@ -66,9 +66,9 @@ December = session.query(Measurement.tobs).filter(extract('month', Measurement.d
 
 To offer more certainty on the provided weather data, additional queries were run to retrieve the average precipitation for June and December along with rain classifications grouped by year. 
 
-“Rain is classified as light, meaning rain falling at a rate between a trace and 0.10 inch per hour; moderate, 0.11 to 0.30 inch per hour; heavy, more than 0.30 inch per hour.”
+>“Rain is classified as light, meaning rain falling at a rate between a trace and 0.10 inch per hour; moderate, 0.11 to 0.30 inch per hour; heavy, more than 0.30 inch per hour.”
 
-  Skilling, Tom. “Ask Tom: Are there definitions for downpour, drizzle or light, steady, heavy rain?” The Chicago Tribune. 28 September 2018,      www.chicagotribune.com/weather/ct-wea-asktom-0929-20180928-column.html/. Accessed 13 February 2022.
+>Skilling, Tom. “Ask Tom: Are there definitions for downpour, drizzle or light, steady, heavy rain?” The Chicago Tribune. 28 September 2018,      www.chicagotribune.com/weather/ct-wea-asktom-0929-20180928-column.html/. Accessed 13 February 2022.
 
 <p float="left">
   <img src="Images/June_precipitation_rainrange.png" width="340" height="340" />
