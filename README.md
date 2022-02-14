@@ -1,4 +1,4 @@
-# Surfs Up Analysis
+# Surf's Up Analysis
 
 ## Overview
 
@@ -20,6 +20,8 @@ The analysis is based on the following SQLite database and dataset:
 
 The analysis is available here: [SurfsUp_Challenge](SurfsUp_Challenge.ipynb)
 
+The additional queries are available here: [Additional_queries](Additional_queries.ipynb)
+
 ### Software and Application
 
 The software and web-based application used for this analysis are:
@@ -40,7 +42,7 @@ The data summary below provides solid statistical analysis—such as the mean, s
 
 Here are 3 points worth noting from the above temperature summary statistics:
 
-* An initial data exploration on weather dataset was done to filter the months of June and December from all the years of data available in the SQLite database. As data was retrieved, it was found that the total number of times temperature was observed for June was 1,700 and for December was 1,517. Note the last row of data available in the database is August 23, 2017, hence the count difference of 183 in the summary statistics between June and December.
+* An initial data exploration on weather dataset was done to filter the months of June and December from all the years of data available in the SQLite database. As data was retrieved, it was found that the total number of times temperature was observed for June was 1,700 and for December was 1,517. Note the last row of data available in the SQLite database is August 23, 2017, hence the count difference of 183 in the summary statistics between June and December.
 
 To obtain specific temperature data, the **extract function** along with the **query method** was used for the month of June as follows:
 
@@ -56,7 +58,7 @@ December = []
 December = session.query(Measurement.tobs).filter(extract('month', Measurement.date)==12).all()
 ```
 
-* Moreover, the mean or average temperature for June is 75 degrees Fahrenheit and 71 degrees Fahrenheit for December; rounded up to the nearest tenth.  This displays temperatures during the Summer and Winter seasons are not far off from each other and are consistent every year.
+* Moreover, the mean or average temperature for June is 75 degrees Fahrenheit and 71 degrees Fahrenheit for December; rounded up to the nearest integer.  This displays temperatures during the Summer and Winter seasons are not far off from each other and are consistent every year.
 
 * Lastly, it is observed that 75% of the time the temperature for June and December sets at 77 degrees Fahrenheit and 74 degrees Fahrenheit, respectively. This allows to have confidence that Surf n’ Shake can be open for business throughout the year.
       
@@ -98,7 +100,7 @@ plt.savefig("Images/June_precipitation_graphsummary.png")
 ```
 
 
-In conclusion, an exploratory analysis on weather data was completed to generate a summary statistics for temperatures in June and December. Using Python and SQLAlchemy, additional queries were run to retrieve precipitation data on both June and December months. The precipitation data was then represented in a line chart so that all together it can instill confidence in W. Avy to invest in Surf n’ Shake with the likelihood of expanding to other islands in the long term.
+In conclusion, an exploratory analysis on weather data was completed to generate a summary statistics for temperatures in June and December. Using Python and SQLAlchemy, additional queries were run to retrieve precipitation data on both June and December months. The precipitation data was then represented in a line chart to further instill confidence in W. Avy to invest in Surf n’ Shake with an eye toward future expansion. Given all the data reflected above, weather should not be a major concern with respect to investing in Surf n’ Shake. Surf's up!
 
 ![Hawaii_Mountains](Images/Hawaii_Mountains.png)
 
